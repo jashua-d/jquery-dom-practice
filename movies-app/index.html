@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies App</title>
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    .movie {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Movies App</h1>
+
+  <!-- Movie form -->
+  <form id="movieForm">
+    <label for="title">Title:</label>
+    <!-- Input for movie title with minimum length validation -->
+    <input type="text" id="title" required minlength="2">
+
+    <label for="rating">Rating (0-10):</label>
+    <!-- Input for movie rating with range validation -->
+    <input type="number" id="rating" required min="0" max="10">
+
+    <!-- Button to submit the form -->
+    <button type="submit">Add Movie</button>
+  </form>
+
+  <!-- Container for displaying movies -->
+  <div id="moviesList"></div>
+
+  <div>
+    <label>Sort by:</label>
+    <!-- Dropdown for selecting sorting criteria -->
+    <select id="sortSelect">
+      <option value="title">Title</option>
+      <option value="rating">Rating</option>
+    </select>
+    <label>Order:</label>
+    <!-- Dropdown for selecting sorting order -->
+    <select id="orderSelect">
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select>
+    <!-- Button to trigger sorting -->
+    <button id="sortButton">Sort</button>
+  </div>
+
+  <!-- Include app.js for the main application logic -->
+  <script src="app.js"></script>
+
+</body>
+</html>
